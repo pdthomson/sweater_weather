@@ -77,7 +77,7 @@ describe 'Forecast API' do
       get "/api/v1/forecast?location="
 
       response_body = JSON.parse(response.body, symbolize_names: true)
-      expect(response_body[:message]).to eq("parameter is missing or the value is empty: location")
+      expect(response_body[:message]).to eq("param is missing or the value is empty: location")
     end
   end 
 end 
