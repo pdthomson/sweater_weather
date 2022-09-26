@@ -10,8 +10,8 @@ class BookSerializer
           attributes:{
             destination: "#{location}",
             forecast:{
-              summary: forecast[:current][:weather][0][:description],
-              temperature: forecast[:current][:temp]
+              summary: forecast[0].conditions,
+              temperature: forecast[0].temperature
             },
             total_books_found: books[:numFound],
             books: books[:docs].shift(quantity).map do |book| 
