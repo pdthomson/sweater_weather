@@ -14,12 +14,8 @@ class BookSerializer
               temperature: forecast[0].temperature
             },
             total_books_found: books[:numFound],
-            books: books[:docs].shift(quantity).map do |book| 
-              {
-                isbn: book[:isbn],
-                title: book[:title],
-                publisher: book[:publisher]
-              }
+            books: books[:docs].shift(quantity).map do |book_data| 
+              Book.new(book_data)
             end
           }
         }

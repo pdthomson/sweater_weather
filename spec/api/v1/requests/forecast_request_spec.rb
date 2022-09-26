@@ -34,7 +34,7 @@ describe 'Forecast API' do
       expect(forecast[:attributes][:current_weather]).to have_key(:humidity)
       expect(forecast[:attributes][:current_weather][:humidity]).to be_a(Integer)
       expect(forecast[:attributes][:current_weather]).to have_key(:uvi)
-      expect(forecast[:attributes][:current_weather][:uvi]).to be_a(Integer)
+      expect(forecast[:attributes][:current_weather][:uvi]).to be_a(Numeric)
       expect(forecast[:attributes][:current_weather]).to have_key(:visibility)
       expect(forecast[:attributes][:current_weather][:visibility]).to be_a(Integer)
       expect(forecast[:attributes][:current_weather]).to have_key(:conditions)
