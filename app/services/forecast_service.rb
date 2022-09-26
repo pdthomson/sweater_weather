@@ -8,6 +8,7 @@ class ForecastService
         faraday.params[:lat] = lat
         faraday.params[:lon] = lon
         faraday.params[:exclude] = 'minutely,alerts'
+        faraday.params[:units] = 'imperial'
       end
       
       response = conn.get(url)
