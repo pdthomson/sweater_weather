@@ -7,7 +7,7 @@ class ForecastFacade
       current = CurrentForecast.new(json[:current])
       daily = json[:daily][0..4].map{ |data| DailyForecast.new(data) }
       hourly = json[:hourly][0..7].map { |data| HourlyForecast.new(data)}
-      # binding.pry
+      [current, daily, hourly]
     end
 
   end
