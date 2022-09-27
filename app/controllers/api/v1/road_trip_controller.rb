@@ -8,11 +8,9 @@ class Api::V1::RoadTripController < ApplicationController
       render json: RoadTripSerializer.impossible_route(trip_params[:origin], trip_params[:destination])
     else 
       forecast = ForecastFacade.forecast(road_trip.lat, road_trip.lon)
-      # binding.pry
       render json: RoadTripSerializer.create_roadtrip(road_trip, forecast)
     end
   end
-
 
   private 
 

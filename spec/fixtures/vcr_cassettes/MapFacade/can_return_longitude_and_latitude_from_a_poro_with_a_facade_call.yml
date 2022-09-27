@@ -19,11 +19,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 27 Sep 2022 21:50:24 GMT
+      - Tue, 27 Sep 2022 23:03:52 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1028'
+      - '1031'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Tue, 27 Sep 2022 21:50:24 GMT
+      - Tue, 27 Sep 2022 23:03:52 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=BBB787CBD4B880C71ED819A8715B3554; Path=/; HttpOnly
+      - JSESSIONID=BAD02CE42023B856CA1F0A761009D472; Path=/; HttpOnly
       X-Vz-Migration-Api:
       - 'false'
       Status:
@@ -55,6 +55,6 @@ http_interactions:
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"seattle,
         WA"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Seattle","adminArea5Type":"City","adminArea4":"King
-        County","adminArea4Type":"County","adminArea3":"WA","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282039223","unknownInput":"","type":"s","latLng":{"lat":47.603229,"lng":-122.33028},"displayLatLng":{"lat":47.603229,"lng":-122.33028},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=LlzEtltMbhRTORzfflzXOWW0kFH38mAC&type=map&size=225,160&locations=47.603229,-122.33028|marker-sm-50318A-1&scalebar=true&zoom=12&rand=52372991"}]}]}'
-  recorded_at: Tue, 27 Sep 2022 21:50:24 GMT
+        County","adminArea4Type":"County","adminArea3":"WA","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282039223","unknownInput":"","type":"s","latLng":{"lat":47.603229,"lng":-122.33028},"displayLatLng":{"lat":47.603229,"lng":-122.33028},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=LlzEtltMbhRTORzfflzXOWW0kFH38mAC&type=map&size=225,160&locations=47.603229,-122.33028|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-1855390986"}]}]}'
+  recorded_at: Tue, 27 Sep 2022 23:03:52 GMT
 recorded_with: VCR 6.1.0
