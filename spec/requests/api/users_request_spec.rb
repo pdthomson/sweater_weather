@@ -27,4 +27,36 @@ RSpec.describe 'Users API' do
     expect(parsed_json[:data][:attributes]).to_not have_key(:password)
   end
 
+  it 'does not work if passwords dont match', :vcr do 
+    user_params = {
+      email: 'beannahdurke@hotmail.com',
+      password: 'frogstomp',
+      password_confirmation: 'frog'
+    }
+    headers = { 'CONTENT_TYPE' => 'application/json' }
+
+    post '/api/v1/users', headers: headers, params: JSON.generate(user_params)
+
+    error = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to have_http_status(400)
+    expect(error[:error]).to eq('Email is taken or left blank or passwords do not match')
+  end
+
+  it 'does not work if email is left blank', :vcr do 
+    user_params = {
+      email: '',
+      password: 'frogstomp',
+      password_confirmation: 'stomp'
+    }
+    headers = { 'CONTENT_TYPE' => 'application/json' }
+
+    post '/api/v1/users', headers: headers, params: JSON.generate(user_params)
+
+    error = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to have_http_status(400)
+    expect(error[:error]).to eq("Email is taken or left blank or passwords do not match")
+  end
+
 end
