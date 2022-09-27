@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.mapquestapi.com/geocoding/v1/address?key=LlzEtltMbhRTORzfflzXOWW0kFH38mAC&location=seattle,%20WA
+    uri: http://www.mapquestapi.com/geocoding/v1/address?from&key=LlzEtltMbhRTORzfflzXOWW0kFH38mAC&location=seattle,%20WA&to
     body:
       encoding: US-ASCII
       string: ''
@@ -19,11 +19,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 27 Sep 2022 04:22:25 GMT
+      - Tue, 27 Sep 2022 19:37:00 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1028'
+      - '1030'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Tue, 27 Sep 2022 04:22:25 GMT
+      - Tue, 27 Sep 2022 19:37:00 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=6AF6014D107A581EC21C373C55C2DCE1; Path=/; HttpOnly
+      - JSESSIONID=F6D4D25A015FD9AFEBB2B135E09977C9; Path=/; HttpOnly
       X-Vz-Migration-Api:
       - 'false'
       Status:
@@ -55,6 +55,6 @@ http_interactions:
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"seattle,
         WA"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Seattle","adminArea5Type":"City","adminArea4":"King
-        County","adminArea4Type":"County","adminArea3":"WA","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282039223","unknownInput":"","type":"s","latLng":{"lat":47.603229,"lng":-122.33028},"displayLatLng":{"lat":47.603229,"lng":-122.33028},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=LlzEtltMbhRTORzfflzXOWW0kFH38mAC&type=map&size=225,160&locations=47.603229,-122.33028|marker-sm-50318A-1&scalebar=true&zoom=12&rand=54060769"}]}]}'
-  recorded_at: Tue, 27 Sep 2022 04:22:25 GMT
+        County","adminArea4Type":"County","adminArea3":"WA","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282039223","unknownInput":"","type":"s","latLng":{"lat":47.603229,"lng":-122.33028},"displayLatLng":{"lat":47.603229,"lng":-122.33028},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=LlzEtltMbhRTORzfflzXOWW0kFH38mAC&type=map&size=225,160&locations=47.603229,-122.33028|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-919794184"}]}]}'
+  recorded_at: Tue, 27 Sep 2022 19:37:00 GMT
 recorded_with: VCR 6.1.0
