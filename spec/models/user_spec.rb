@@ -14,7 +14,6 @@ RSpec.describe User, type: :model do
     }
 
     user = User.new(user_data)
-    binding.pry
     expect(user.random_key.length).to eq(26)
   end
 end
