@@ -24,4 +24,45 @@ RSpec.describe 'User session' do
     expect(user[:data][:attributes]).to_not have_key(:password)
   end
 
+  it 'gives 400 if password doesnt match' do 
+    User.create!(email: 'faseycazio@dnd.com', password: 'warpigs', password_confirmation: 'warpigs')
+
+    user_params = {
+      email:'faseycazio@dnd.com',
+      password: 'parwigs'
+    }
+
+    headers = { 'CONTENT_TYPE' => 'application/json' }
+
+    post '/api/v1/sessions', headers: headers, params: JSON.generate(user_params)
+
+    user = JSON.parse(response.body, symbolize_names: true)
+    
+    expect(response).to_not be_successful
+    expect(response).to have_http_status(400)
+    expect(user[:error]).to eq('Email or password is incorrect')
+  end
+
+  it 'gives 400 if email is blank' do 
+    User.create!(email: 'faseycazio@dnd.com', password: 'warpigs', password_confirmation: 'warpigs')
+
+    user_params = {
+      email:'',
+      password: 'parwigs'
+    }
+
+    headers = { 'CONTENT_TYPE' => 'application/json' }
+
+    post '/api/v1/sessions', headers: headers, params: JSON.generate(user_params)
+
+    user = JSON.parse(response.body, symbolize_names: true)
+    
+    expect(response).to_not be_successful
+    expect(response).to have_http_status(400)
+    expect(user[:error]).to eq('Email or password is incorrect')
+
+  end
+
+
+
 end
