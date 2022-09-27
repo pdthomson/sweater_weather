@@ -2,8 +2,8 @@ class Api::V1::RoadTripController < ApplicationController
   
   def create 
     road_trip = MapFacade.roadtrip(trip_params[:origin], trip_params[:destination])
-    if !trip_params[:api_key] 
-      json_response( {message: ''}, 401)
+    if !trip_params[:api_key] || trip_params[:api_key].blank?
+      json_response( {message: 'Api key blank or not matching'}, 401)
     elsif road_trip == 'impossible route'
       render json: RoadTripSerializer.impossible_route(trip_params[:origin], trip_params[:destination])
     else 

@@ -10,7 +10,7 @@ class MapFacade
 
     def roadtrip(from, to)
       trip = MapService.get_directions(from, to)
-      if trip[:route][:routeError][:errorcode] == 2 
+      if trip[:route][:routeError][:errorCode] == 2 
         'impossible route'
       else
         RoadTrip.new(trip)
