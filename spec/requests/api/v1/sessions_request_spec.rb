@@ -40,7 +40,7 @@ RSpec.describe 'User session' do
     
     expect(response).to_not be_successful
     expect(response).to have_http_status(400)
-    expect(user[:error]).to eq('Email or password is incorrect')
+    expect(user[:message]).to eq('Email or password is incorrect')
   end
 
   it 'gives 400 if email is blank' do 
@@ -59,10 +59,7 @@ RSpec.describe 'User session' do
     
     expect(response).to_not be_successful
     expect(response).to have_http_status(400)
-    expect(user[:error]).to eq('Email or password is incorrect')
-
+    expect(user[:message]).to eq("param is missing or the value is empty: email")
   end
-
-
 
 end
