@@ -78,7 +78,7 @@ Installation
 Open your terminal and run these commands:
 
 gem install bundler
-git clone https://github.com/z-prince/sweater_weather
+git clone git@github.com:pdthomson/sweater_weather.git
 bundle install
 rails db:{drop,create,migrate,seed}
 Due to the fact that this will be a local consumption, all endpoints you consume will start with http://localhost:3000 by default unless specified otherwise.
