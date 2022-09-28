@@ -13,7 +13,10 @@ class MapFacade
       if trip[:route][:routeError][:errorCode] == 2 
         'impossible route'
       else
-        RoadTrip.new(trip)
+        lat = trip[:route][:locations][1][:displayLatLng][:lat]
+        lon = trip[:route][:locations][1][:displayLatLng][:lng]
+        weather = ForecastService.get_forecast(lat, lon)
+        RoadTrip.new(trip, weather)
       end
     end
 

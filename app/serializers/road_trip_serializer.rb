@@ -12,8 +12,8 @@ class RoadTripSerializer
           end_city: trip.end_point,
           travel_time: trip.travel_time,
           weather_at_eta: {
-            temperature: forecast[0].temperature,
-            conditions: forecast[0].conditions
+            temperature: trip.temp_on_arrival,
+            conditions: trip.weather_on_arrival
           }
         }
       }
@@ -34,7 +34,7 @@ class RoadTripSerializer
         }
       }
     }
-    end
+  end
 
   end
 end
