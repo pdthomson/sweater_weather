@@ -84,10 +84,11 @@ If you also need Rails please visit the Rails documentation site here.
 Installation
 Open your terminal and run these commands:
 
-gem install bundler
-git clone git@github.com:pdthomson/sweater_weather.git
-bundle install
-rails db:{drop,create,migrate,seed}
+1. gem install bundler
+2. git clone git@github.com:pdthomson/sweater_weather.git
+3. bundle install
+4. rails db:{drop,create,migrate,seed}
+
 Due to the fact that this will be a local consumption, all endpoints you consume will start with http://localhost:3000 by default unless specified otherwise.
 
 Now that everything is properly configured on your local machine, run rails s in your terminal to start the server and get consuming!
