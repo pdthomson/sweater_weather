@@ -8,7 +8,7 @@ module ExceptionHandler
     end
 
     rescue_from ActiveRecord::RecordInvalid do |e|
-      json_response({ message: e.message}, 400)
+      json_response({ message: 'Email or password is incorrect'}, 400)
     end
 
     rescue_from ActionController::ParameterMissing do |e|
