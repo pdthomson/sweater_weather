@@ -25,7 +25,6 @@ class RoadTrip
   end
 
   def arrival_weather(data, forecast)
-    binding.pry
     if @time < 24 
       forecast[:hourly][@time][:weather][0][:description]
     else @time >=
@@ -34,7 +33,6 @@ class RoadTrip
   end
 
   def arrival_temp(data, forecast)
-  
     if @time < 24 
       forecast[:hourly][@time][:temp]
     else @time >= 24 

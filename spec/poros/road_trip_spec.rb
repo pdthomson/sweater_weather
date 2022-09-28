@@ -15,6 +15,8 @@ let!(:fixture1) {File.read('./spec/fixtures/weather_call.json')}
     expect(directions.end_point).to eq('Arlington, VA')
     expect(directions.lat).to eq(38.84893)
     expect(directions.lon).to eq(-77.081223)
+    expect(directions.weather_on_arrival).to eq('broken clouds')
+    expect(directions.temp_on_arrival).to eq(62.83)
   end
 
 end
